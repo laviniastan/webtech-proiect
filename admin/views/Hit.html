@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+</head>
+
+<body>
+    <h3>Ai ales Hit-ul: {{Hit.title}} </h3><br/>
+    <h4>Anul Aparitiei: {{Hit.year}} </h4>
+    <form name="addForm" action="#" class="controls">
+        <center><h3>Adauga un Hit din acelas an <stong>{{Hit.title}} </stong></h3></center>
+        
+     
+        
+        <label for="hitname">Titlu Hit:</label>
+        <input type="text" id="hitInput" name="hitname" placeholder="Hit Title" ng-model="selectHit.title" required minlength="3"> <br/>
+        <label for="year">An</label>
+        <input type="text" id="hitInputYear" placeholder="Year" ng-value="{{selectHit}}" name="hitname" ng-model="selectHit.year" required minlength="3" /> <br/>
+       
+     
+      <!-- <center> <input type="button" class ="btn btn-success" value="Adauga" ng-click="addRecipe(selectRecipe)" /></center>-->
+      <center> <button type="button" class ="button" value="Adauga" ng-click="addHit(selectHit)">Adauga</button></center>
+       <br/>
+       
+    </form>
+
+    <table id=tableIngredient class="table">
+        <tr>
+            <th>Titlu </th>
+            <th>Anul Aparitiei</th>
+        </tr>
+        <tr ng-repeat="link in links" ng-include="getTemplate(link)">
+
+        </tr>
+    </table>
+
+    <script type="text/ng-template" id="display">
+        <td>{{link.Hit.title}}</td>
+        <td>{{link.Hit.year}}</td>
+        
+        <td><input type="button" class ="btn btn-danger" value="Delete" ng-click="deleteLink(link)" /></td>
+        <td><input type="button" class ="btn btn-warning" value="Edit" ng-click="editLink(link)" /></td>
+    </script>
+ 
+    <script type="text/ng-template" id="edit">
+        <td><input type="text" ng-model="link.Hit.title" /></td>
+        <td><input type="text" ng-model="link.Hit.year" /></td>
+        <td><input type="button"class ="btn btn-danger" value="Cancel" ng-click="cancelEditing()" /></td>
+        <td><input type="button"class ="btn btn-success"value="Save" ng-click="saveLink(link)" /></td>
+        
+    </script>
+
+
+
+</body>
+
+</html>

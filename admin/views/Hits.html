@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+    
+<head>
+
+</head>
+
+<body>
+<h3><center><strong>Cele mai tari hit-uri!</center></strong></h3>
+    <div class="container">
+        <table bgcolor="#FEF9E7" class="table table-hover table-bordered pull:center" >
+            <thead>
+                <th>Imagine</th>
+                <th>Titlu </th>
+                <th>Anul Aparitiei</th>
+            </thead>
+            <tr ng-repeat="h in Hits" >
+                <td style="margin-right:1"><a ui-sref="Hit({'id': i.id})">{{i.title}}</a> </td>
+                <td style="margin-left:1">{{i.year}} </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap CSS file-->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- JS files needed for Angular -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+        <script type="text/javascript" src="https://code.angularjs.org/1.5.6/angular-route.min.js"></script>
+        
+        
+    
+    
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/controllers/dj_controller.js"></script>
+    <script type="text/javascript" src="js/controllers/hit_controller.js"></script>
+    <script type="text/javascript" src="js/controllers/hits_controller.js"></script>
+    <script type="text/javascript" src="js/newHit_controller/recipesController.js"></script>
+    <script type="text/javascript" src="css/stype.css"></script>
+    
+    <title>Dj Zone</title>
+    </head>
+ <body>
+  
+<div ng-app="aplicatie">
+  
+ <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <h1 class="navbar-brand" href="#"><strong><font color="#D4AC0D"></font></strong></h1>
+       <div class="container text-center">
+       <img src="media/dj.png" style="width:300;height:160px">
+     
+   </div>
+      </div>
+   
+      <ul class="nav navbar-left ">
+        <li> <a ui-sref="Home">Home</a></li>
+        <li> <a ui-sref="Ingredients">Hits</a></li>
+        <li> <a ui-sref="Recipes">DJ</a></li>
+        <li> <a ui-sref="Help">Help</a></li>
+
+      </ul> 
+   <!--   
+     <ul class="nav  navbar-right">
+               <li><a href="#/Home" id="homeBtn"> <font color="#D4AC0D">Home</font></a></li>
+               <li><a href="#/Hits" id="hitsBtn" ><font color="#D4AC0D">Hits</font></a></li>
+               <li><a href="#/Help" id="helpBtn" ><font color="#D4AC0D">Help</font></a></li>
+               <li><a href="#/Contact" id="contactBtn" ><font color="#D4AC0D">Contact</font></a></li>
+              
+             </ul> 
+             
+              <ul class="nav navbar-nav navbar-right padding-right:250px">
+              <li><a href="#/Hits" id="hitsBtn" ><font color="#D4AC0D">Hits</font></a></li>
+              <li><a href="#/addHit" id="addHitBtn" ><font color="#D4AC0D">Add Hit</font></a></li>
+             
+               
+              
+             </ul> -->
+    </div>
+  
+</nav>
+
+<div ui-view></div>
+
+
+  </div>
+ 
+  </body>
+</html>

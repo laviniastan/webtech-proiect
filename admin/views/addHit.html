@@ -1,0 +1,23 @@
+ <form name="hitForm">
+     <div id="addHitContainer">
+   <center> <h2>Adauga hit nou</h2></center>
+                      <div class="loaded_module">
+                          <div class="container-fluid">
+                        <label for="hit_title">Titlu</label>
+                        <input type="text" name="hit_title" id="hit_title"  ng-model="hits.name" class="form-control" required/>
+
+    
+                    
+                        <label for="an">An</label>
+                        <input type="text" name="an" id="image" placeholder="anul aparitiei" ng-model="ingredients.description" class="form-control" required>
+    
+                      
+               </div> 
+    <br>
+    <br>
+                      <center>  <button type="button"  class="btn btn-success btn-lg" id="addHitBtn" ng-click="newHit()" ng-disabled="HitForm.$invalid">Add Hit</button></center>
+       
+    
+    </div>
+</form>
+   
