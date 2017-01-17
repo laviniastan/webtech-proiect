@@ -1,6 +1,6 @@
 var aplicatie=angular.module("apicatie", ['ui.router','ngRoute','hits_controller','hit_controller','newHit_controller','dj_controller']);
 
-app.config(["$stateProvider", '$urlRouterProvider', function($stateProvider,$urlRouterProvider) {
+aplicatie.config(["$stateProvider", '$urlRouterProvider', function($stateProvider,$urlRouterProvider) {
     
     $urlRouterProvider.otherwise('/Home');
     

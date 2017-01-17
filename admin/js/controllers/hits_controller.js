@@ -1,5 +1,4 @@
 var hits_controller=angular.module("hits_controller",['ui.router']);
-const server="https://webtech-proiect-lavinia-stan.c9users.io";
 
 hits_controller.controller('hits_controller',['$scope','$http', function($scope,$http){
   

@@ -1,5 +1,5 @@
 var hit_controller = angular.module('hit_controller', ['ui.router']);
-const server="https://webtech-proiect-lavinia-stan.c9users.io";
+
 
 hit_controller.controller('hit_controller', ['$scope', '$http', '$stateParams', '$state', function($scope, $http, $stateParams, $state) {
     var $constructor = () => {

@@ -6,6 +6,8 @@ var app = new express();
 app.use(bodyParser.json());
 app.use(cors());
 
+app.use(express.static(__dirname + "/admin"));
+
 var nodeadmin=require("nodeadmin");
 app.use(nodeadmin(app));
 
@@ -24,19 +26,20 @@ var link = require(__dirname + "/routes/Links.js");
 app.use(link);
 
 
-app.get('/create', (req, res) => {
+app.get('/create', (request, response) => {
     sequelize
         .sync({
             force: true
         })
         .then(() => {
-            res.status(201).send('created')
+            response.status(201).send('created')
         })
         .catch((error) => {
             console.warn(error)
-            res.status(500).send('error')
+            response.status(500).send('error')
         })
 })
 
 app.listen(process.env.PORT);
+app.listen(process.env.IP);
 //app.listen(8080);
